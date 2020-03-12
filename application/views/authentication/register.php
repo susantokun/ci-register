@@ -4,9 +4,6 @@
 	</div>
 
 	<div class="register-box-body">
-		<font color="green">
-			<?php echo $this->session->flashdata('pesan'); ?>
-		</font>
 		<p class="login-box-msg">Register a new membership</p>
 		<?php echo form_open('auth/check_register','') ;?>
 		<div class="form-group has-feedback">
@@ -32,4 +29,18 @@
 		</div>
 		<a href="<?php echo base_url('auth/login') ;?>" class="text-center">I already have a membership</a>
 	</div>
+	<div id="myalert">
+		<?php echo $this->session->flashdata('alert', true); ?>
+	</div>
 </div>
+
+<script>
+	$(function() {
+		$('input').iCheck({
+			checkboxClass: 'icheckbox_square-blue',
+			radioClass: 'iradio_square-blue',
+			increaseArea: '20%' // optional
+		});
+	});
+	$('#myalert').delay('slow').slideDown('slow').delay(4100).slideUp(600);
+</script>
