@@ -1,6 +1,6 @@
-## Form Pendaftaran di CodeIgniter
+## CodeIgniter Register
 
-### Berikut adalah fitur - fitur yang terdapat pada ci-susantokun_register :
+### Features
 - Telah terintegrasi dengan Template AdminLTE-2.4.3
 - Notifikasi saat berhasil mendaftar
 - Hash password ke database saat mendaftar
