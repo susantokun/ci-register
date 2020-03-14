@@ -35,7 +35,7 @@ class Auth_model extends CI_Model
         'username' => $this->input->post('username'),
         'email' => $this->input->post('email'),
         'id_role' => '2',
-        'created_on' => date('Y-m-d H:i:s'),
+        'created_at' => date('Y-m-d H:i:s'),
         'password' => get_hash($this->input->post('password'))
       );
       return $this->db->insert($this->table, $data);
