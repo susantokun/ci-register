@@ -35,7 +35,7 @@ class Auth extends MY_Controller
           'favicon'   => $site['favicon'],
           'site'      => $site
       );
-      $this->template->load('authentication/layout/template','authentication/register',$data);
+      $this->template->load('authentication/layouts/template','authentication/register',$data);
     }
 
     public function check_register()
@@ -50,7 +50,7 @@ class Auth extends MY_Controller
       $this->form_validation->set_rules('email', 'Email', 'trim|required|min_length[5]|max_length[50]');
       $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[5]|max_length[20]');
       if ($this->form_validation->run() == false) {
-        $this->template->load('authentication/layout/template','authentication/register',$data);
+        $this->template->load('authentication/layouts/template','authentication/register',$data);
       }
       else {
         $this->Auth_model->reg();
